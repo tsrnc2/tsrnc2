@@ -1,14 +1,20 @@
 # Jacob W. Wood
 
-### Senior code review & team lead · C/C++ systems (since 1999)
+### Senior code review & team lead · I ship working, tested, secure software
 
-I own architecture and the **merge bar**: agents and collaborators propose; review gates and human approval decide what ships. Looking for **senior review** and **engineering team-lead** roles (remote or Portland).
+**Shipped.** [Pity Please!](https://store.steampowered.com/app/1154140) has been live on Steam since Sep 2025. I directed the 6-person Godot/C++ team and owned its architecture and code review across 2,000+ commits, with Linux, Windows, and Android builds.
 
-- **Review leadership:** mentorship through code review, written standards, approval bound to artifacts (not rubber stamps)
-- **Team lead:** directed a 6-person Godot/C++ team; Pity Please! shipped on Steam Sep 2025
-- **Systems:** C++17/20 on Linux/POSIX — ckpatch (signed deploy/review pipeline), improved (~35k LOC agent orchestrator with safety-review + Qt6 approval UI)
-- **Training:** Amazon Learning Ambassador & PIT Trainer — taught operators, wrote process docs
+**Tested.** Tests ship with the code: unit, contract, golden, and security tests across my active repos, CI on those repos, and `-Werror` builds under both g++ and clang++.
 
-Most repos are private. **Code walkthroughs on request.** Public: [Traveler](https://github.com/tsrnc2/Traveler) · Steam: [Pity Please!](https://store.steampowered.com/app/1154140) · LinkedIn: [jacobwwoodcpp](https://www.linkedin.com/in/jacobwwoodcpp/)
+**Secure.** Fail-closed defaults, sandboxed command boundaries, SSH-signed artifacts, approvals bound to artifact hashes, and redacted logs.
 
-Honesty: no paid SWE title; no degree (PSU CS 2009–2012). I architect and review; AI agents often implement under that control.
+| Project | Proof |
+|---|---|
+| **ckpatch** (C++20) | Signed production patch pipeline. Every patch passes test, review, and human approval before it deploys, then gets verified with automatic rollback. |
+| **improved** (C++17, ~35k LOC) | Supervised patch orchestrator with test, eval, safety-review, and decision gates, plus a Qt6 approval UI. |
+| **Pity Please! GDExtension** (C++) | A* navmesh, behavior trees, and traffic sim, shipping in a commercial release. |
+| [**Traveler**](https://github.com/tsrnc2/Traveler) | Public Godot 3 + GLSL project. |
+
+I'm looking for **senior code-review and team-lead** roles, remote or Portland. Most repos are private, and I'm happy to do live walkthroughs. [LinkedIn](https://www.linkedin.com/in/jacobwwoodcpp/)
+
+To be upfront: I haven't held a paid SWE title and I don't have a degree. AI agents write much of the implementation in my newer projects. I own the architecture, the tests, the review, and the call on what ships.
