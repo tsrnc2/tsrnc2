@@ -1,40 +1,50 @@
 # Jacob W. Wood
 
-### Software developer · C/C++ systems · Linux automation · AI agent tooling
+### Senior Software Developer & Technical Lead · C/C++ · Linux · AI Infrastructure
 
-I build native tools and modular services that make complex systems easier to operate, test, and maintain. My work spans C/C++, Linux infrastructure, and supervised AI agents, with a focus on clear interfaces, reliable execution, and practical debugging.
+I lead the architecture and development of independent software projects spanning native systems, Linux automation, and AI agent infrastructure. My role is to turn broad requirements into component designs, implementation priorities, integration plans, and reviewable software.
 
-**Seeking software development opportunities in C/C++, Linux systems, developer tooling, and AI infrastructure. Open to remote work.**
+I own the technical direction: defining interfaces, evaluating tradeoffs, directing implementation, reviewing changes, and setting validation criteria. I use AI coding agents as development tools within that process, while retaining responsibility for engineering decisions and the resulting work.
 
-## What I bring
+**Seeking senior software development and technical lead opportunities in systems software, developer tooling, Linux infrastructure, and AI platforms. Open to remote work.**
 
-- **Systems development:** C, C++17/20/23, POSIX, process management, sockets, threads, and native CLI tools.
-- **Linux and automation:** Arch Linux, Bash, systemd, Docker Compose, MQTT, Home Assistant, and Android/Termux integration.
-- **Engineering tools:** Git, CMake, Make, GCC, Clang, Python, automated tests, and reproducible build workflows.
-- **AI infrastructure:** provider adapters, typed contracts, plugin frameworks, evaluation harnesses, and supervised agent workflows.
+## My role across the projects
 
-## Selected engineering projects
+- **Architecture and design:** establish small cores, service boundaries, typed contracts, dependency rules, and failure behavior.
+- **Development leadership:** break complex work into bounded tasks, set priorities, direct implementation, and resolve integration blockers.
+- **Code review and quality:** review implementation against requirements, coordinate testing and adversarial review, and track unresolved defects.
+- **Integration and delivery:** plan migrations, manage compatibility between components, and define build, verification, deployment, and rollback workflows.
+- **Technical communication:** document decisions, explain tradeoffs, and maintain clear project status and handoffs.
 
-Most of my current systems work is in private repositories. The summaries below describe repository implementations and prototypes; code and architecture walkthroughs are available on request.
+## Selected projects and technical ownership
 
-| Project | Engineering focus |
+Most of my current systems work is private. These projects include implementations, prototypes, and ongoing development; architecture and code walkthroughs are available on request.
+
+| Project | My development role and engineering focus |
 | --- | --- |
-| **ckpatch** · C++20 | A signed, Git-based maintenance pipeline with resumable stages, artifact-bound approval, deployment verification, and rollback. |
-| **KITT** · C++23 and Python | A modular agent platform with provider routing, quota and cost controls, plugin contracts, and a native service core under development. |
-| **LLM Reasoning Project** · Python and C++ | A structured skill and role library connected to a reasoning runtime, provider adapters, evaluations, and an independently buildable document-index tool. |
-| **Home Assistant Stack** · C++ and Bash | A terminal interface and monitoring daemon for a Docker Compose stack, with service management, MQTT status publishing, and systemd integration. |
+| **KITT** · C++23 and Python | Lead platform architecture and integration around a small core and modular services. Direct provider routing, plugin interfaces, resource controls, and the ongoing native-core migration. |
+| **LLM Reasoning Project** · Python and C++ | Direct the structure and development of reusable reasoning skills, roles, runtime interfaces, and evaluation workflows. Define ownership boundaries between research, executable runtime, native tooling, and KITT integration. |
+| **ckpatch** · C++20 | Own technical direction for a signed, Git-based maintenance pipeline, including resumable stages, artifact-bound approval, verification, rollback, and constrained AI repair workflows. |
+| **Home Assistant Stack** · C++ and Bash | Direct native interface and daemon development, service orchestration, diagnostics, MQTT integration, and Linux packaging around a Docker Compose stack. |
 
-## Public work to explore
+## Technical foundation
 
-- [**Project Control Center**](https://github.com/tsrnc2/project-control-center) — a GitHub-based project dashboard combining task tracking, coordination schemas, and automation.
+**Languages:** C, C++17/20/23, Python, Bash  
+**Systems:** Linux, POSIX, processes, sockets, threads, systemd, Docker Compose  
+**Development:** Git, CMake, Make, GCC, Clang, automated testing, reproducible builds  
+**Integration:** provider adapters, plugin APIs, typed schemas, MQTT, Home Assistant, Android/Termux
+
+## Public work
+
+- [**Project Control Center**](https://github.com/tsrnc2/project-control-center) — project coordination, task tracking, schemas, and automation.
 - [**Traveler**](https://github.com/tsrnc2/Traveler) — a Godot game project with public source and a [demo video](https://www.youtube.com/watch?v=m52_YYni3A4).
 
-## How I work
+## Engineering approach
 
-I favor small cores, explicit component boundaries, and tests that exercise failure paths. I document design decisions so another developer can understand the tradeoffs and continue the work.
+I favor designs that another developer can understand, test, and maintain. I make component responsibilities explicit, examine failure paths, and keep implementation status separate from planned capabilities.
 
-I use AI coding tools extensively under my direction. My responsibilities include architecture, requirements, implementation review, and validation; I welcome technical questions about the designs and code.
+AI-assisted development is a substantial part of my workflow. I direct the work, review the implementation, and remain accountable for architecture and validation. I welcome detailed discussion of design decisions, code, and tradeoffs.
 
-Forked repositories are identified as upstream work and are separate from my original projects.
+Forked repositories are upstream projects I have studied or experimented with and are separate from my original work.
 
 **Contact details are on my résumé. Project walkthroughs are available on request.**
