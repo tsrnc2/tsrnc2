@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://jacob-wood-cpp-consulting.onrender.com/sitemap.xml
