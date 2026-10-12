@@ -23,6 +23,7 @@
 
   const owns = (object, key) => Object.prototype.hasOwnProperty.call(object, key);
   let selected = "single";
+  const saleOn = () => Boolean(window.COURSE_SALE && window.COURSE_SALE.isActive());
 
   // URL validation is a safety boundary, not verification of a Stripe product or price.
   // The payment provider remains authoritative for amount, currency, tax, and payment status.
@@ -62,13 +63,20 @@
     selected = owns(products, key) ? key : "single";
     const product = products[selected];
     document.getElementById("productTitle").textContent = product.title;
-    document.getElementById("productPrice").textContent = product.price;
+    const courseSale = selected === "course" && saleOn();
+    document.getElementById("productPrice").textContent = courseSale ? window.COURSE_SALE.salePrice : product.price;
+    const was = document.getElementById("productWas");
+    if (was) was.hidden = !courseSale;
     document.getElementById("productSubtitle").textContent = product.subtitle;
     document.getElementById("productDescription").textContent = product.description;
-    document.getElementById("productSavings").hidden = selected !== "course";
+    const savings = document.getElementById("productSavings");
+    savings.hidden = selected !== "course";
+    savings.textContent = courseSale
+      ? "New Year sale: 60% off until Jan 1. Save $1,000 compared with 14 individual lessons."
+      : "Save $400 compared with 14 individual lessons.";
     const email = document.getElementById("bookingEmail");
     email.textContent = product.emailLabel;
-    email.href = "mailto:Jacob.w.wood.cs@gmail.com?subject=" + encodeURIComponent(product.title + " inquiry");
+    email.href = "mailto:Jacob.w.wood.cs@gmail.com?subject=" + encodeURIComponent(product.title + (courseSale ? " (New Year sale $400)" : "") + " inquiry");
     radios.forEach((radio) => { radio.checked = radio.value === selected; });
     refreshCheckoutState();
     if (updateURL) {
@@ -92,6 +100,7 @@
     if (radio.checked) selectProduct(radio.value, true);
   }));
   window.addEventListener("popstate", selectFromURL);
+  document.addEventListener("salechange", () => selectProduct(selected));
   button.addEventListener("click", () => {
     const url = paymentURL(selected);
     if (!url) {

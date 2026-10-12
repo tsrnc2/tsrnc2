@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Book a one-hour C/C++ lesson for $100 or a 14-lesson course for $1,000 with Jacob W. Wood.">
+<meta name="description" content="Book a one-hour C/C++ lesson for $100 or a 14-lesson course for $400 (New Year sale, regularly $1,000) with Jacob W. Wood.">
 <meta name="author" content="Jacob W. Wood">
 <meta name="theme-color" content="#090c0f">
 <title>C/C++ Lessons & Checkout | Jacob W. Wood</title>
@@ -14,9 +14,10 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jacob-wood-cpp-consulting.onrender.com/checkout.html">
 <meta property="og:title" content="C/C++ Lessons & Checkout | Jacob W. Wood">
-<meta property="og:description" content="$100 private lesson or $1,000 14-lesson C/C++ course.">
+<meta property="og:description" content="$100 private lesson or 14-lesson C/C++ course, now $400 (was $1,000) until Jan 1 — C/C++ course.">
 <meta name="twitter:card" content="summary">
 <script defer src="app.js"></script>
+<script defer src="sale.js"></script>
 <script defer src="checkout-config.js"></script>
 <script defer src="checkout.js"></script>
 </head>
@@ -31,6 +32,7 @@
 <a class="basic" data-view-switch href="basic/checkout.html">Basic HTML</a>
 </nav>
 </div></header>
+<div class="sale-banner" data-sale-on role="note"><strong>New Year sale: 60% off the 14-lesson course until Jan 1</strong> <span class="sale-countdown" data-sale-countdown></span> <a href="#order">See the deal</a></div>
 <main id="main">
 <section class="hero">
 <div>
@@ -40,8 +42,8 @@
 <div class="actions"><a class="btn primary" href="#order">Choose a plan</a><a class="btn" href="#curriculum">View curriculum</a></div>
 </div>
 <div class="term">single lesson   $100
-14 lessons    $1,000
-course savings $400
+14 lessons    <span data-sale-on>$400 (was $1,000)</span><span data-sale-off hidden>$1,000</span>
+course savings <span data-sale-on>$1,000 · 60% off</span><span data-sale-off hidden>$400</span>
 
 60 minutes each
 remote · one-on-one
@@ -53,7 +55,7 @@ USD</div>
 <h2>Two simple options.</h2>
 <div class="prices">
 <article class="card price-card"><h3>Single lesson</h3><div class="price">$100</div><p>One 60-minute private session.</p><ul><li>Debugging or code review</li><li>Language or toolchain topic</li><li>Architecture/design question</li></ul><a class="btn" href="checkout.html?product=single#order">Select one lesson</a></article>
-<article class="card price-card"><h3>14-lesson course</h3><div class="price">$1,000</div><p class="save">Save $400 vs. 14 individual lessons.</p><ul><li>Structured C/C++ systems sequence</li><li>Exercises and real-code work</li><li>Debugging, tooling, architecture, capstone</li></ul><a class="btn primary" href="checkout.html?product=course#order">Select the course</a></article>
+<article class="card price-card"><h3>14-lesson course</h3><div class="price"><span data-sale-on><s class="was">$1,000</s> $400</span><span data-sale-off hidden>$1,000</span></div><p class="save" data-sale-on>New Year sale: save $1,000 vs. 14 individual lessons (ends Jan 1).</p><p class="save" data-sale-off hidden>Save $400 vs. 14 individual lessons.</p><ul><li>Structured C/C++ systems sequence</li><li>Exercises and real-code work</li><li>Debugging, tooling, architecture, capstone</li></ul><a class="btn primary" href="checkout.html?product=course#order">Select the course</a></article>
 </div>
 </section>
 
@@ -65,11 +67,11 @@ USD</div>
 <fieldset style="border:0;padding:0;margin:0">
 <legend><strong>Choose a plan</strong></legend>
 <label class="plan"><input checked name="product" type="radio" value="single"><span>Single lesson<br><small class="muted">1 × 60 minutes · $100 USD</small></span></label>
-<label class="plan"><input name="product" type="radio" value="course"><span>14-lesson course<br><small class="muted">14 × 60 minutes · $1,000 USD</small></span></label>
+<label class="plan"><input name="product" type="radio" value="course"><span>14-lesson course<br><small class="muted">14 × 60 minutes · <span data-sale-on><s>$1,000</s> $400</span><span data-sale-off hidden>$1,000</span> USD</small></span></label>
 </fieldset>
 <div aria-live="polite">
 <h3 id="productTitle">Single C/C++ Lesson</h3>
-<div class="price">$<span id="productPrice">100</span></div>
+<div class="price"><s class="was" hidden id="productWas">$1,000</s> $<span id="productPrice">100</span></div>
 <p class="muted" id="productSubtitle">1 × 60-minute one-on-one lesson · USD</p>
 <p class="save" hidden id="productSavings">Save $400 compared with 14 individual lessons.</p>
 </div>
