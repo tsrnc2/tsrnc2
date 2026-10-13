@@ -6,6 +6,10 @@
   const active = () => Date.now() < END;
   window.COURSE_SALE = Object.freeze({ end: END, isActive: active, salePrice: "400", regularPrice: "1,000" });
 
+  // CSS defaults to regular pricing when JavaScript is absent. Mark JavaScript as
+  // active before toggling the dated sale elements.
+  document.documentElement.classList.add("sale-js-active");
+
   function apply() {
     const on = active();
     document.querySelectorAll("[data-sale-on]").forEach((el) => { el.hidden = !on; });
