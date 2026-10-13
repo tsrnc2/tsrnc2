@@ -1,0 +1,74 @@
+name: Consulting site CI
+
+on:
+  push:
+    branches:
+      - cpp-consulting-site
+  pull_request:
+    branches:
+      - cpp-consulting-site
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: consulting-site-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate static site
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run publication checks
+        run: python tools/validate_site.py
+
+  deploy:
+    name: Trigger Render when hook is configured
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/cpp-consulting-site'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Call protected Render deploy hook
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ -z "${RENDER_DEPLOY_HOOK_URL:-}" ]]; then
+            echo "::notice title=Render deploy skipped::Repository secret RENDER_DEPLOY_HOOK_URL is not configured. Validation passed; production was not changed."
+            exit 0
+          fi
+
+          case "$RENDER_DEPLOY_HOOK_URL" in
+            https://api.render.com/deploy/*) ;;
+            *)
+              echo "::error title=Invalid deploy hook::RENDER_DEPLOY_HOOK_URL must be an HTTPS Render deploy-hook URL."
+              exit 1
+              ;;
+          esac
+
+          # Never print the hook URL: it contains a deployment secret.
+          curl \
+            --fail \
+            --silent \
+            --show-error \
+            --retry 3 \
+            --retry-all-errors \
+            --request POST \
+            "$RENDER_DEPLOY_HOOK_URL" \
+            >/dev/null
+
+          echo "Render deploy hook accepted the request for commit ${GITHUB_SHA}."
