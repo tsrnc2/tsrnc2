@@ -16,6 +16,7 @@
 <meta property="og:title" content="Safe Native Tooling for LLM Agents in Modern C++ | Jacob W. Wood">
 <meta property="og:description" content="Safe Native Tooling for LLM Agents in Modern C++: 14 private 90-minute sessions building the agent-toolbox C++20 service, with a capstone defense.">
 <meta name="twitter:card" content="summary">
+<script defer src="site-config.js"></script>
 <script defer src="app.js"></script>
 </head>
 <body>
@@ -48,11 +49,11 @@
 <p><strong>Controls confirmed:</strong> deny is the zero/default decision; only qualified, enabled runners execute; capabilities match exact tool and operation identities; child grants cannot widen capability, depth, timeout, or output; unknown keys and duplicate JSON keys are rejected; absolute, parent, and symlink paths are denied; external execution never invokes a shell; environment, file descriptors, process lifetime, stdin, and output are bounded; the external binary must match a SHA-256 pin; preflight audit is durable before any side effect; SQLite inputs use bound parameters; and FTS5 receives literal queries.</p>
 <p><strong>7 remaining accepted risks</strong> (explicit non-goals or production-hardening work):</p><ol><li>Path validation and path use are separate operations; a same-privilege local process doing concurrent renames may exploit a TOCTOU window.</li><li>Binary hashing and path-based <code>execve</code> are separate; production hardening should hash and execute the same descriptor.</li><li>The executor provides no namespace, seccomp, cgroup, Landlock, Capsicum, container, or equivalent OS isolation.</li><li>Post-<code>fork</code> setup assumes the single-threaded CLI/daemon model; a multithreaded host needs a dedicated subprocess helper or a carefully reviewed spawn design.</li><li>A completion-audit failure cannot undo a side effect that already happened.</li><li>Grants are instance-wide; remote multi-principal use requires authenticated principal-to-grant binding.</li><li><code>toolboxd</code> is a line protocol only: no network authentication, transport encryption, replay defense, or rate limiting.</li></ol></section>
 <section class="section"><h2>Threat-model caveat</h2><p><strong>This is an instructional boundary, not a production sandbox.</strong> The reference implementation is qualified for the stated instructional Linux/WSL boundary only. Path and executable verify/use races (TOCTOU), a same-privilege local-attacker model, and missing namespace/seccomp/cgroup-style containment remain documented residual risks. Production deployment requires additional OS-level containment and independent review. Labs use disposable workspaces and non-privileged accounts, and the course does not authorize testing systems you do not own or have permission to assess.</p></section>
-<section class="section"><h2>Enroll</h2><p>The course is the 14-lesson package on the <a href="checkout.html?product=course">Lessons &amp; Checkout</a> page. The New Year sale price applies there until Jan 1, 2027.</p><p><a href="mailto:Jacob.w.wood.cs@gmail.com?subject=Safe%20Native%20Tooling%20course%20inquiry">Email about the course</a></p></section>
+<section class="section"><h2>Enroll</h2><p>The course is the 14-lesson package on the <a href="checkout.html?product=course">Lessons &amp; Checkout</a> page. The New Year sale price applies there until Jan 1, 2027.</p><p><a href="mailto:Jacob.W.Wood.cs@gmail.com?subject=Safe%20Native%20Tooling%20course%20inquiry">Email about the course</a></p></section>
 </main>
 <footer>
 <span>© <span data-year>2026</span> Jacob W. Wood</span>
-<span><a href="mailto:Jacob.w.wood.cs@gmail.com">Email</a> · <a rel="me" href="https://github.com/tsrnc2">GitHub</a> · <a href="basic/course.html" data-view-switch>Basic HTML</a></span>
+<span><a href="mailto:Jacob.W.Wood.cs@gmail.com">Jacob.W.Wood.cs@gmail.com</a><span data-phone-wrap> · <a data-phone href="tel:GOOGLE_VOICE_TEL">GOOGLE_VOICE_NUMBER</a></span> · <a href="https://www.linkedin.com/in/jacobwwoodcpp/">LinkedIn</a> · <a rel="me" href="https://github.com/tsrnc2">GitHub</a> · <a href="basic/course.html" data-view-switch>Basic HTML</a></span>
 </footer>
 </body>
 </html>
