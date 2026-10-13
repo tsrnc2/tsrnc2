@@ -27,3 +27,7 @@ Technical claims must remain bounded by the cited source records. Do not turn pl
 
 Render serves the repository root from this branch. Auto-deploy is enabled for branch updates.
 
+
+## Deployment verification
+
+- 2026-10-13: documentation-only branch commit used to verify Render auto-deploy wiring after publication.
