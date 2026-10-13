@@ -25,9 +25,16 @@ Technical claims must remain bounded by the cited source records. Do not turn pl
 
 ## Deployment
 
-Render serves the repository root from this branch. Auto-deploy is enabled for branch updates.
+Render serves the repository root from this branch. The current service was created from a public repository URL, so branch pushes do **not** currently trigger automatic deploys even though the service metadata says auto-deploy is enabled. Render requires a connected Git provider for push-triggered deployments.
 
+Until the Git credential is repaired:
+
+1. Compare the branch head SHA with Render's live deploy commit.
+2. Trigger an explicit Render deploy only when the live commit is behind.
+3. Verify the resulting deploy reaches `live` for the exact branch-head SHA.
+
+See [`DEPLOYMENT.md`](DEPLOYMENT.md) and [issue #1](https://github.com/tsrnc2/tsrnc2/issues/1).
 
 ## Deployment verification
 
-- 2026-10-13: documentation-only branch commit used to verify Render auto-deploy wiring after publication.
+- 2026-10-13: commit `9562bc07addc76834526f1e100331c33c5105a1c` proved that a branch push did not trigger Render automatically. Explicit deploy `dep-db76sf2vcj2c739860i0` synchronized production to that exact commit.
