@@ -11,8 +11,8 @@
     course: Object.freeze({
       title: "14-Lesson C/C++ Course",
       price: "1,000",
-      subtitle: "14 × 60-minute one-on-one lessons · USD",
-      description: "A structured 14-session C/C++ systems course with progressive instruction, real-code exercises, debugging, tooling, architecture, and a final capstone review.",
+      subtitle: "14 × 90-minute one-on-one sessions + capstone defense · USD",
+      description: "Safe Native Tooling for LLM Agents in Modern C++: fourteen 90-minute private sessions building the agent-toolbox C++20 service, plus a capstone defense.",
       emailLabel: "Email about the course"
     })
   });
@@ -72,7 +72,7 @@
     const savings = document.getElementById("productSavings");
     savings.hidden = selected !== "course";
     savings.textContent = courseSale
-      ? "New Year sale: 60% off until Jan 1. Save $1,000 compared with 14 individual lessons."
+      ? "New Year sale: 60% off until Jan 1, 2027. Save $1,000 compared with 14 individual lessons."
       : "Save $400 compared with 14 individual lessons.";
     const email = document.getElementById("bookingEmail");
     email.textContent = product.emailLabel;
