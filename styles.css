@@ -10,3 +10,7 @@ footer{max-width:var(--max);margin:45px auto 0;padding:30px 20px 45px;border-top
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 .sale-banner{background:var(--green);color:#06140d;text-align:center;padding:9px 16px;font-size:.95rem}.sale-banner a{color:#06140d;text-decoration:underline;margin-left:8px}.sale-countdown{font-variant-numeric:tabular-nums;margin-left:8px;opacity:.95}.was{opacity:.55;font-size:.55em;font-weight:700;margin-right:6px}[hidden]{display:none!important}
+
+/* Without JavaScript, default to regular pricing rather than showing a dated sale. */
+html:not(.sale-js-active) [data-sale-on]{display:none!important}
+html:not(.sale-js-active) [data-sale-off]{display:revert!important}
