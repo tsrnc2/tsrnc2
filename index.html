@@ -3,90 +3,136 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Jacob W. Wood provides C/C++ systems consulting and private instruction focused on debugging, architecture, performance, native integrations, and build tooling.">
+<title>C &amp; C++ Lessons with Jacob W. Wood | Private Lessons &amp; 14-Session Course</title>
+<meta name="description" content="Private C and C++ lessons from Jacob W. Wood, writing C/C++ since 1999 and shipping on Steam. $100 one-hour lessons, or the 14-session Modern C++ course (New Year sale $400).">
 <meta name="author" content="Jacob W. Wood">
-<meta name="theme-color" content="#090c0f">
-<title>Jacob W. Wood | C/C++ Systems Consulting</title>
+<meta name="theme-color" content="#0b1220">
 <link rel="canonical" href="https://jacob-wood-cpp-consulting.onrender.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="styles.css">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Jacob W. Wood — C &amp; C++ Lessons">
 <meta property="og:url" content="https://jacob-wood-cpp-consulting.onrender.com/">
-<meta property="og:title" content="Jacob W. Wood | C/C++ Systems Consulting">
-<meta property="og:description" content="C/C++ systems consulting, debugging, architecture, performance, and private instruction.">
-<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Learn C &amp; C++ the safe, professional way">
+<meta property="og:description" content="Private one-on-one C and C++ lessons and a 14-session Modern C++ course. New Year sale: $400 (regularly $1,000) until Jan 1, 2027.">
+<meta property="og:image" content="https://jacob-wood-cpp-consulting.onrender.com/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jacob-wood-cpp-consulting.onrender.com/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Person","@id":"https://jacob-wood-cpp-consulting.onrender.com/#jacob","name":"Jacob W. Wood","jobTitle":"C/C++ Engineer and Instructor","email":"mailto:Jacob.W.Wood.cs@gmail.com","url":"https://jacob-wood-cpp-consulting.onrender.com/","sameAs":["https://github.com/tsrnc2","https://www.linkedin.com/in/jacobwwoodcpp/"],"knowsAbout":["C","C++","Godot GDExtension","CMake","AddressSanitizer","POSIX"]},
+{"@type":"Course","name":"Safe Native Tooling for LLM Agents in Modern C++","description":"14 private 90-minute sessions building the agent-toolbox C++20 service, plus a capstone defense.","url":"https://jacob-wood-cpp-consulting.onrender.com/course.html","provider":{"@id":"https://jacob-wood-cpp-consulting.onrender.com/#jacob"},"instructor":{"@id":"https://jacob-wood-cpp-consulting.onrender.com/#jacob"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"online","courseWorkload":"PT21H"},"offers":{"@type":"Offer","price":"400","priceCurrency":"USD","priceValidUntil":"2026-12-31","category":"Paid"}},
+{"@type":"Service","name":"Private 60-minute C/C++ lesson","provider":{"@id":"https://jacob-wood-cpp-consulting.onrender.com/#jacob"},"offers":{"@type":"Offer","price":"100","priceCurrency":"USD"}}
+]}
+</script>
+<script defer src="site-config.js"></script>
 <script defer src="app.js"></script>
 <script defer src="sale.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="sale-banner" data-sale-on role="note"><strong>New Year sale:</strong> the 14-session course is 60% off, $400 instead of $1,000, until Jan 1, 2027. <span class="sale-countdown" data-sale-countdown></span> <a href="checkout.html?product=course">Claim the price</a></div>
 <header><div class="bar">
-<a class="brand" href="index.html">Jacob W. Wood<small>C/C++ consulting &amp; lessons</small></a>
+<a class="brand" href="index.html"><span class="logo" aria-hidden="true">{ }</span><span>Jacob W. Wood<small>C &amp; C++ lessons</small></span></a>
 <nav class="nav" aria-label="Primary">
-<a aria-current="page" href="index.html">Home</a>
+<a href="#offers">Lessons</a>
+<a href="course.html">Course</a>
 <a href="experience.html">Experience</a>
-<a href="checkout.html">Lessons &amp; Checkout</a>
-<a class="basic" data-view-switch href="basic/index.html">Basic HTML</a>
+<a href="#faq">FAQ</a>
+<a class="btn primary small" href="#contact">Contact</a>
 </nav>
 </div></header>
-<div class="sale-banner" data-sale-on role="note"><strong>New Year sale: 60% off the 14-lesson course until Jan 1</strong> <span class="sale-countdown" data-sale-countdown></span> <a href="checkout.html?product=course">See the deal</a></div>
 <main id="main">
 <section class="hero">
 <div>
-<p class="eyebrow">C/C++ systems consulting</p>
-<h1>Native software, made clearer.</h1>
-<p class="lede">Architecture, debugging, performance, build systems, legacy modernization, and one-on-one C/C++ instruction.</p>
+<p class="eyebrow">Private C &amp; C++ instruction</p>
+<h1>Write C and C++ that is safe, tested, and works.</h1>
+<p class="lede">One-on-one lessons from an engineer who has written C and C++ since 1999 and shipped a commercial game on Steam. No slides-only theory: you work in real code, with warnings, sanitizers and tests turned on.</p>
 <div class="actions">
-<a class="btn primary" href="mailto:Jacob.w.wood.cs@gmail.com?subject=C%2FC%2B%2B%20consulting%20inquiry">Discuss a project</a>
-<a class="btn" href="checkout.html">Book a lesson</a>
+<a class="btn primary" href="checkout.html?product=course">Enroll in the course <span data-sale-on>— $400</span></a>
+<a class="btn" href="checkout.html?product=single">Book a $100 lesson</a>
 </div>
-<div class="tags"><span>C17 / C++17+</span><span>GCC / Clang</span><span>CMake / Make</span><span>Linux / FreeBSD</span><span>Godot GDExtension</span></div>
+<ul class="facts" aria-label="Highlights">
+<li><strong>1999</strong><span>writing C/C++</span></li>
+<li><strong>Steam</strong><span>shipped title</span></li>
+<li><strong>~2.5 yrs</strong><span>Amazon Learning &amp; Training</span></li>
+</ul>
 </div>
-<div class="term">$ focus
-C/C++ architecture
-debugging &amp; failure analysis
-performance measurement
-toolchain/build repair
-native integrations
-code review
-private instruction</div>
+<div class="term" aria-label="Example code"><span class="c">// lesson 9: hostile input is denied, not trusted</span>
+<span class="k">auto</span> path = contain(root, request.path);
+<span class="k">if</span> (!path) <span class="k">return</span> deny(<span class="s">"outside root"</span>);
+<span class="c">$ ctest --preset asan</span>
+<span class="ok">100% tests passed, 0 failed</span></div>
 </section>
 
-<section class="section">
-<p class="eyebrow">Services</p>
-<h2>Focused help for native code.</h2>
+<section class="section" id="who">
+<p class="eyebrow">Who it's for</p>
+<h2>Built for developers who want to be trusted with native code.</h2>
 <div class="grid">
-<article class="card"><h3>Debug &amp; diagnose</h3><p>Reproduce failures, narrow causes, inspect ownership and lifetime issues, and build a practical verification path.</p></article>
-<article class="card"><h3>Architecture &amp; modernization</h3><p>Clarify boundaries, reduce coupling, improve testability, and modernize C/C++ code without unnecessary rewrites.</p></article>
-<article class="card"><h3>Build &amp; portability</h3><p>Work through compiler differences, CMake/Make problems, warnings, dependencies, and platform-specific integration issues.</p></article>
+<article class="card"><h3>Working developers</h3><p>You know another language and need C or C++ for a job, a codebase, or an interview, and want the professional habits from day one.</p></article>
+<article class="card"><h3>Game &amp; engine programmers</h3><p>You write Godot, gameplay, or engine code and want ownership, performance, and native extensions to stop being guesswork.</p></article>
+<article class="card"><h3>Students &amp; career changers</h3><p>You can write functions and classes, but pointers, memory bugs, CMake, and debugging still slow you down.</p></article>
 </div>
 </section>
 
-<section class="section">
-<p class="eyebrow">Selected work</p>
-<h2>Evidence-backed systems work.</h2>
-<p class="intro">The technical claims below map to the source appendix on the Experience page.</p>
-<div class="grid">
-<article class="card"><h3>PityPlease traffic core</h3><p class="claim">A C++ Godot 4 GDExtension registers native traffic-state, AStar-mesh, movement-grid, and vehicle-core components. <a class="claim-ref" href="experience.html#c1">[C1]</a></p></article>
-<article class="card"><h3>Supervised C++ agent runtime</h3><p class="claim">Improved is a C++17 prototype with a stable supervisor, explicit authority boundaries, approval gates, and GCC/Clang verification paths. <a class="claim-ref" href="experience.html#c3">[C3]</a></p></article>
-<article class="card"><h3>Engineering verification</h3><p class="claim">A C++ reference test package recorded matching GCC/Clang verification output and a passing ASan/UBSan self-test, with the sanitizer claim limited to that self-test. <a class="claim-ref" href="experience.html#c4">[C4]</a></p></article>
-</div>
-<div class="actions"><a class="btn" href="experience.html">See experience &amp; evidence</a></div>
-</section>
-
-<section class="section">
-<p class="eyebrow">Private instruction</p>
-<h2>Learn C/C++ with real code.</h2>
+<section class="section" id="offers">
+<p class="eyebrow">Two ways to learn</p>
+<h2>Pick a single lesson or the full course.</h2>
 <div class="grid two">
-<article class="card"><h3>Single 60-minute lesson</h3><p class="price">$100</p><p>Target one topic, bug, design problem, or code review.</p><a class="btn" href="checkout.html?product=single">Choose one lesson</a></article>
-<article class="card"><h3>14-lesson course</h3><p class="price"><span data-sale-on><s class="was">$1,000</s> $400</span><span data-sale-off hidden>$1,000</span></p><p class="save" data-sale-on>New Year sale: save $1,000 vs. 14 individual lessons (ends Jan 1).</p><p class="save" data-sale-off hidden>Save $400 vs. 14 individual lessons.</p><p>Structured systems-oriented curriculum, adapted to your level and project.</p><a class="btn primary" href="checkout.html?product=course">See the course</a></article>
+<article class="card offer"><h3>Private lesson</h3><p class="price">$100 <small>/ 60 min</small></p><ul class="check"><li>Any C or C++ topic you choose</li><li>Debug a real bug or review your code</li><li>Interview prep, CMake, sanitizers, Godot GDExtension</li><li>Online, one-on-one</li></ul><a class="btn" href="checkout.html?product=single">Book one lesson</a></article>
+<article class="card offer featured"><span class="ribbon" data-sale-on>60% off until Jan 1, 2027</span><h3>14-session course</h3><p class="price"><span data-sale-on><s class="was">$1,000</s> $400</span><span data-sale-off hidden>$1,000</span></p><ul class="check"><li>14 private sessions, 90 minutes each</li><li>Plus a capstone defense</li><li>Build the <code>agent-toolbox</code> C++20 service</li><li>Every lesson ends on a pass/fail acceptance gate</li></ul><p class="save" data-sale-on>Less than one third of 14 single lessons ($1,400).</p><a class="btn primary" href="checkout.html?product=course">Enroll in the course</a></article>
 </div>
+</section>
+
+<section class="section" id="why">
+<p class="eyebrow">Why learn from Jacob</p>
+<h2>Taught by someone who ships and teaches.</h2>
+<div class="grid">
+<article class="card"><h3>Decades in C/C++</h3><p>Writing C and C++ since 1999, across systems tools, simulations, and native integrations on Linux and Windows.</p></article>
+<article class="card"><h3>Shipped on Steam</h3><p>Shipped <a href="https://store.steampowered.com/app/1154140">Pity Please!</a> with RebelMedia Interactive, including its C++ Godot GDExtension traffic and pathfinding core.</p></article>
+<article class="card"><h3>Training background</h3><p>About 2.5 years on Amazon's Learning &amp; Training team, so lessons are structured, paced, and checked, not improvised.</p></article>
+</div>
+<p class="intro">The course reference solution is verified: 180 automated checks pass and 22 of 22 hostile requests are rejected, with an adversarial security review published on the <a href="course.html">course page</a>.</p>
+</section>
+
+<section class="section" id="outline">
+<p class="eyebrow">Course outline</p>
+<h2>Safe Native Tooling for LLM Agents in Modern C++</h2>
+<ol class="outline">
+<li>Project Layout &amp; Modern CMake</li><li>Warnings, Sanitizers &amp; Interface Targets</li><li>Testing Without a Framework (CTest)</li><li>Tool Contracts with Value Types</li><li>Interfaces, Ownership &amp; Registry</li><li>Default-Deny Authority &amp; Grants</li><li>Gateway &amp; Fail-Closed Audit</li><li>Safe POSIX Process Execution</li><li>Hostile Input &amp; Path Containment</li><li>SQLite RAII &amp; Audit</li><li>FTS5 Retrieval Index</li><li>OpenSSL EVP Hash Pinning</li><li>Strict JSON Admission</li><li>CI, Qualification &amp; Shipping</li>
+</ol>
+<div class="actions"><a class="btn" href="course.html">Full course details →</a></div>
+</section>
+
+<section class="section faq" id="faq">
+<p class="eyebrow">FAQ</p>
+<h2>Questions, answered.</h2>
+<details><summary>What do I need to know before starting?</summary><p>Functions, classes or structs, pointers and references, standard containers, and basic Git. A short diagnostic before the course spots any gaps.</p></details>
+<details><summary>How are lessons delivered?</summary><p>Online, one-on-one, scheduled around your time zone (Jacob is in US Pacific time).</p></details>
+<details><summary>What setup do I need?</summary><p>Linux or WSL, GCC 11+ or Clang 14+, CMake 3.24+, Ninja and Git. macOS works for most concepts.</p></details>
+<details><summary>Is the capstone defense included?</summary><p>Yes, the course is 14 sessions plus a capstone defense.</p></details>
+<details><summary>Do I need any AI or machine-learning background?</summary><p>No. The course is about native C++ engineering; the LLM agent is just the realistic, hostile client your code has to stay safe against.</p></details>
+<details><summary>When does the sale end?</summary><p>The $400 course price ends at midnight Pacific on Jan 1, 2027, after which it returns to $1,000.</p></details>
+</section>
+
+<section class="section cta" id="contact">
+<h2>Ready to write better C and C++?</h2>
+<p class="lede">Email or call to ask a question, schedule a lesson, or enroll in the course.</p>
+<ul class="contact">
+<li><span>Email</span><a href="mailto:Jacob.W.Wood.cs@gmail.com?subject=C%2FC%2B%2B%20lessons">Jacob.W.Wood.cs@gmail.com</a></li>
+<li data-phone-wrap><span>Phone</span><a data-phone href="tel:GOOGLE_VOICE_TEL"><!--PHONE-->GOOGLE_VOICE_NUMBER<!--/PHONE--></a></li>
+<li><span>LinkedIn</span><a href="https://www.linkedin.com/in/jacobwwoodcpp/">jacobwwoodcpp</a></li>
+<li><span>GitHub</span><a rel="me" href="https://github.com/tsrnc2">tsrnc2</a></li>
+</ul>
+<div class="actions"><a class="btn primary" href="checkout.html?product=course">Enroll now</a><a class="btn" href="mailto:Jacob.W.Wood.cs@gmail.com?subject=C%2FC%2B%2B%20lessons">Send an email</a></div>
 </section>
 </main>
 <footer>
-<span>© <span data-year>2026</span> Jacob W. Wood</span>
-<span><a href="mailto:Jacob.w.wood.cs@gmail.com">Email</a> · <a rel="me" href="https://github.com/tsrnc2">GitHub</a> · <a href="basic/index.html" data-view-switch>Basic HTML</a></span>
+<div><strong>Jacob W. Wood</strong><br><span class="muted">C &amp; C++ lessons · consulting · US Pacific</span></div>
+<div class="foot-links"><a href="mailto:Jacob.W.Wood.cs@gmail.com">Jacob.W.Wood.cs@gmail.com</a><span data-phone-wrap> · <a data-phone href="tel:GOOGLE_VOICE_TEL">GOOGLE_VOICE_NUMBER</a></span> · <a href="https://www.linkedin.com/in/jacobwwoodcpp/">LinkedIn</a> · <a rel="me" href="https://github.com/tsrnc2">GitHub</a> · <a href="basic/index.html" data-view-switch>Basic HTML</a></div>
+<div class="muted">© <span data-year>2026</span> Jacob W. Wood</div>
 </footer>
 </body>
 </html>
