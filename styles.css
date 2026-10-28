@@ -32,3 +32,25 @@ body{background:radial-gradient(circle at 80% -10%,rgba(94,234,212,.10),transpar
 .contact{list-style:none;padding:0;margin:30px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:900px}.contact li{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;overflow-wrap:anywhere}.contact span{display:block;color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em}.contact a{font-weight:700}
 footer{align-items:center}.foot-links a{color:var(--text)}
 @media(max-width:800px){.outline,.contact{grid-template-columns:1fr}.bar{flex-direction:row;flex-wrap:wrap}.nav a{padding:7px 8px}.facts{gap:18px}}
+
+
+/* Watch / Cast / Cheatsheets */
+.embed{position:relative;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:14px 0}
+.embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.embed.short{aspect-ratio:9/16;max-width:280px;margin-inline:auto}
+.embed-grid{grid-template-columns:1fr;gap:22px}
+.shorts-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.short-card h3{font-size:1.05rem;margin:.4em 0}
+.cast-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.turnaround{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-top:12px}
+.turnaround figure,.sheet,.hero-art{margin:0}
+.turnaround img,.sheet img,.hero-art img,.sheet-thumb{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#0a1018;display:block}
+.turnaround figcaption,.sheet figcaption{color:var(--muted);font-size:.78rem;text-align:center;margin-top:4px}
+.sheet-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:22px}
+.hero-wide{grid-template-columns:1fr 1.1fr}
+.cheat-grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.cheat-card .sheet-thumb{margin-bottom:10px;max-height:180px;object-fit:cover;object-position:top}
+.lcd{font:800 .95rem ui-monospace,monospace;color:var(--green);margin-right:6px}
+.kwh-banner{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center;margin-top:18px}
+.kwh-banner img{border-radius:14px;border:1px solid var(--line);width:100%;height:auto}
+@media(max-width:800px){.hero-wide,.kwh-banner{grid-template-columns:1fr}.shorts-grid{grid-template-columns:repeat(2,1fr)}}

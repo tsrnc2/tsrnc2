@@ -19,11 +19,19 @@ SALE_END = datetime.fromisoformat("2027-01-01T00:00:00-08:00").astimezone(timezo
 
 PRIMARY_PAGES = {
     "index.html": f"{BASE_URL}/",
+    "watch.html": f"{BASE_URL}/watch.html",
+    "cast.html": f"{BASE_URL}/cast.html",
+    "cheatsheets.html": f"{BASE_URL}/cheatsheets.html",
+    "course.html": f"{BASE_URL}/course.html",
     "experience.html": f"{BASE_URL}/experience.html",
     "checkout.html": f"{BASE_URL}/checkout.html",
 }
 BASIC_PAGES = {
     "basic/index.html": ("index.html", f"{BASE_URL}/"),
+    "basic/watch.html": ("watch.html", f"{BASE_URL}/watch.html"),
+    "basic/cast.html": ("cast.html", f"{BASE_URL}/cast.html"),
+    "basic/cheatsheets.html": ("cheatsheets.html", f"{BASE_URL}/cheatsheets.html"),
+    "basic/course.html": ("course.html", f"{BASE_URL}/course.html"),
     "basic/experience.html": ("experience.html", f"{BASE_URL}/experience.html"),
     "basic/checkout.html": ("checkout.html", f"{BASE_URL}/checkout.html"),
 }

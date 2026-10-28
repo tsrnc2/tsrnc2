@@ -1,6 +1,6 @@
-# C/C++ Consulting Site
+# C/C++ Consulting & Lessons Site
 
-Static three-page consulting and lesson website for Jacob W. Wood.
+Static consulting, lessons, and Kludge Wagon Haywire companion site for Jacob W. Wood.
 
 ## Production
 
@@ -13,48 +13,33 @@ Static three-page consulting and lesson website for Jacob W. Wood.
 
 ## Pages
 
-- `index.html` — consulting home
+- `index.html` — lessons home + Kludge Wagon Haywire overview
+- `watch.html` — YouTube episodes, trailer, and Shorts embeds (YT landing for inbound traffic)
+- `cast.html` — character / vehicle reference sheets (homage-only)
+- `cheatsheets.html` — printable C/C++ mistake PDF downloads
+- `course.html` — Safe Native Tooling for LLM Agents in Modern C++
 - `experience.html` — experience and technical evidence appendix
-- `checkout.html` — lesson pricing, curriculum, and checkout handoff
+- `checkout.html` — lesson pricing and checkout handoff
 
 Each page has a text-only counterpart under `basic/`.
 
-## Validation
+## Pricing
 
-Run the dependency-free publication gate:
+- Single 60-minute lesson: **$100**
+- 14-session course: **$1,000** regular; New Year sale **$400** until Jan 1, 2027 PT
+
+## Validation
 
 ```sh
 python tools/validate_site.py
 ```
 
-GitHub Actions runs the same validator on pushes and pull requests for this branch. It checks internal links and fragments, graphics/Basic HTML parity, canonical metadata, pricing and sale expiration, conservative no-JavaScript pricing, checkout safety, Stripe URL boundaries, manifest JSON, sitemap XML, and robots metadata.
-
-The workflow also contains a protected Render deploy-hook fallback. It remains inert and exits successfully while the repository secret `RENDER_DEPLOY_HOOK_URL` is absent.
+GitHub Actions runs the same validator on pushes and pull requests for this branch. The workflow also contains a protected Render deploy-hook fallback that stays inert while `RENDER_DEPLOY_HOOK_URL` is absent.
 
 ## Evidence policy
 
 Technical claims must remain bounded by the cited source records. Do not turn planned work into implemented work, limited tests into general qualification, or architecture work into production-complete claims.
 
-## Payments
+## Branding
 
-The checkout remains email-only until Stripe is connected and the public Payment Links are independently verified. See [`PAYMENTS.md`](PAYMENTS.md) for the required products, current $400 course sale, regular $1,000 course price, $100 single lesson, verification record, and sale-expiration procedure.
-
-Only public `buy.stripe.com` Payment Links may be committed. Never commit Stripe keys, webhook secrets, customer data, or dashboard credentials.
-
-## Deployment
-
-Render serves the repository root from this branch. The current service was created from a public repository URL, so branch pushes do **not** currently trigger automatic Render deploys even though the service metadata says auto-deploy is enabled. Render requires a connected Git provider for push-triggered deployments.
-
-Until the Git credential or protected deploy-hook fallback is configured:
-
-1. Require a passing site validation run.
-2. Compare the branch-head SHA with Render's live deploy commit.
-3. Trigger an explicit Render deploy only when production is behind.
-4. Verify the resulting deploy reaches `live` for the exact branch-head SHA.
-
-See [`DEPLOYMENT.md`](DEPLOYMENT.md) and [issue #1](https://github.com/tsrnc2/tsrnc2/issues/1).
-
-## Verification history
-
-- 2026-10-13: commit `9562bc07addc76834526f1e100331c33c5105a1c` proved that a branch push did not trigger Render automatically. Explicit deploy `dep-db76sf2vcj2c739860i0` synchronized production to that exact commit.
-- 2026-10-13: the first `Consulting site CI` run passed the complete publication validator. Its deploy job safely skipped because `RENDER_DEPLOY_HOOK_URL` was not configured.
+Homage branding only. Characters and the Kludge Wagon SR-404 are original. Do not use third-party automotive or TV marks.
